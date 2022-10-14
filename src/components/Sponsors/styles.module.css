@@ -1,0 +1,10 @@
+.asSeenOn {
+  margin: 60px 0;
+}
+
+.asSeenOn img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  /* width: 100s%; */
+}

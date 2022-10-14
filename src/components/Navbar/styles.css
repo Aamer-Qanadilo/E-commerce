@@ -1,0 +1,43 @@
+nav > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+nav .nav-left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5%;
+}
+
+nav .nav-left img {
+    width: 18%;
+    cursor: pointer;
+}
+
+nav .nav-left .nav-dropdown-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+/* Navbar Right */
+
+.nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+}
+
+.nav-right button {
+    background-color: transparent;
+    border: 0;
+    font-size: 12px;
+    cursor: pointer;
+}

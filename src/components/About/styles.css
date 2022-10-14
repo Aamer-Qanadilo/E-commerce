@@ -1,0 +1,39 @@
+.about h2 {
+
+}
+
+.about-body {
+    display: flex;
+    gap: 20px;
+}
+
+.about-body > div {
+    width: 50%;
+}
+
+.about-body img {
+    width: 100%;
+}
+
+.about-body .about-body__content p {
+    font-family: 'VL NewParis Headline', sans-serif;
+    line-height: 30px;
+    color: #33333A;
+    font-size: 18px;
+    margin: 0;
+}
+
+.about-body .about-body__content p:first-child {
+    color: #030303;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-body .about-body__content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 40px;
+    color: #33333A;
+    text-transform: uppercase;
+    letter-spacing: 1;
+}

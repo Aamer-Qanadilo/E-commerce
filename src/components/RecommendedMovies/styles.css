@@ -1,0 +1,71 @@
+.recommended-videos {
+  padding: 60px 0;
+}
+
+.recommended-videos__body {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.recommended-videos__body .recommended-videos__body--item {
+  width: 32%;
+}
+
+.recommended-videos__body
+  .recommended-videos__body--item
+  .recommended-videos__body--item__img {
+  position: relative;
+}
+
+.recommended-videos__body
+  .recommended-videos__body--item
+  .recommended-videos__body--item__img
+  img {
+  width: 100%;
+}
+
+.recommended-videos__body
+  .recommended-videos__body--item
+  .recommended-videos__body--item__img
+  i {
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recommended-videos__body .recommended-videos__body--item h3 {
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.recommended-videos-button {
+  position: relative;
+  margin-top: 30px;
+  padding: 10px 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 800px) {
+  .recommended-videos__body {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+  .recommended-videos__body .recommended-videos__body--item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .recommended-videos__body {
+    flex-direction: column;
+  }
+  .recommended-videos__body .recommended-videos__body--item {
+    width: 100%;
+  }
+}
