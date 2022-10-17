@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 1%;
   flex-wrap: wrap;
 }
 
@@ -80,4 +80,16 @@
 .featured-item:hover .featured-item__img--mask {
   visibility: visible;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 950px) {
+  .featured-list .featured-item {
+    width: 49%;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-list .featured-item {
+    text-align: center;
+  }
 }

@@ -8,3 +8,9 @@
   transform: translateX(-50%);
   /* width: 100s%; */
 }
+
+@media (max-width: 950px) {
+  .asSeenOn img {
+    width: 100%;
+  }
+}
