@@ -5,7 +5,7 @@ import QuickViewImages from "./QuickViewImages";
 import styles from "./styles.module.css";
 
 const QuickView = ({ popupItem: item, setPopupItem }) => {
-  const [displayedImage, setDisplayedImage] = useState(item.images[0]);
+  const [displayedImageIndex, setDisplayedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   document.body.style.overflow = "hidden";
 
@@ -26,8 +26,8 @@ const QuickView = ({ popupItem: item, setPopupItem }) => {
         <div className={styles.quickViewBody}>
           <QuickViewImages
             item={item}
-            displayedImage={displayedImage}
-            setDisplayedImage={setDisplayedImage}
+            displayedImageIndex={displayedImageIndex}
+            setDisplayedImageIndex={setDisplayedImageIndex}
           />
           <QuickViewContent
             item={item}

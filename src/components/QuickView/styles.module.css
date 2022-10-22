@@ -58,6 +58,11 @@
   cursor: pointer;
 }
 
+.quickViewImagesChooserActive {
+  padding: 5px;
+  border: 2px solid #ff6008;
+}
+
 .quickViewDisplayedImage {
   display: flex;
   align-items: center;
