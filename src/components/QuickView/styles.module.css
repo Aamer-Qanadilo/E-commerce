@@ -271,3 +271,19 @@
   padding: 10px 33px;
   letter-spacing: 2px;
 }
+
+@media (max-width: 1000px) {
+  .quickViewContainer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .quickViewBody {
+    flex-direction: column;
+    width: 100%;
+  }
+  .quickViewBody > div {
+    width: 100%;
+  }
+}
