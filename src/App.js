@@ -1,17 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import TopPageInfo from "./components/TopPageInfo/TopPageInfo";
-import Navbar from "./components/Navbar/Navbar";
-import Homepage from "./components/Homepage/Homepage";
+import PageRouter from "./PageRouter";
+import { FeaturedProvider } from "./components/FeaturedContext";
 
 function App() {
   return (
-    <React.Fragment>
-      <TopPageInfo />
-      <Navbar />
-      <Homepage />
-    </React.Fragment>
+    <FeaturedProvider>
+      <PageRouter />
+    </FeaturedProvider>
   );
 }
 

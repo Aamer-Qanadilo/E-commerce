@@ -1,13 +1,15 @@
-import React from 'react'
-import './styles.css';
+import React from "react";
+import "./styles.css";
 
-const Header = () => {
+const Header = ({ headerClass, headerBackground, children }) => {
   return (
-    <header style={{backgroundImage:'url(/assets/images/header.png)'}}>
-        <h1>Perfume Tips Tricks</h1>
-        <button>Shop Now</button>
+    <header
+      className={headerClass}
+      style={{ backgroundImage: `url(${headerBackground})` }}
+    >
+      {children}
     </header>
-  )
-}
+  );
+};
 
 export default Header;

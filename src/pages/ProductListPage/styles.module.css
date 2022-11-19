@@ -1,0 +1,158 @@
+.headerClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.headerClass h2 {
+  font-size: 60px;
+  line-height: 90px;
+}
+
+.headerClass p {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.productContainer {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.productListNav {
+  min-height: 60px;
+  margin-bottom: 40px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.productListNav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productListNav > div > p {
+  font-size: 18px;
+  line-height: 40px;
+  color: rgb(3, 3, 3);
+}
+
+.productListNav > div > ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  /* width: fit-content; */
+  list-style-type: none;
+}
+
+.productListNav > div > ul > li:first-child {
+  font-size: 24px;
+  line-height: 40px;
+  color: rgb(51, 51, 51);
+  font-family: "VL NewParis Headline", sans-serif;
+}
+
+.productListNav > div > ul > li:last-child {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: rgb(81, 83, 86);
+  font-weight: 400;
+}
+
+.productListPageContainer {
+  display: flex;
+  width: 85%;
+  margin: 50px auto;
+}
+
+.productListPageContainer > div:first-child {
+  width: 25%;
+}
+
+.productListPageContainer > div:last-child {
+  width: 75%;
+}
+
+.productListPageFilters {
+  margin-right: 30px;
+}
+
+.productListPageFilters > p {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  letter-spacing: 1;
+}
+
+.productListPageFilters > p > span:last-child {
+  color: #ff6008;
+  cursor: pointer;
+}
+
+.productListPageFilters > ul {
+  all: unset;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px -2px 0 0 #f3f3f3;
+  list-style-type: none;
+  font-family: "VL NewParis Headline", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  gap: 20px;
+}
+
+.productListPageFilters > ul > li {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.productListCard {
+  width: 32% !important;
+}
+
+@media (max-width: 1000px) {
+  .productListNav > div > ul > li:first-child {
+    font-size: 16px;
+  }
+
+  .productListNav > div > ul > li:last-child {
+    font-size: 16px;
+  }
+  .productListPageFilters {
+    font-size: 12px;
+  }
+  .productListPageFilters > ul {
+    font-size: 16px;
+  }
+  .productListPageContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .productListPageContainer > div {
+    width: 80% !important;
+  }
+  .productListPageContainer > div:last-child {
+    gap: 20px;
+  }
+  .productListCard {
+    width: 45% !important;
+    height: 250px !important;
+  }
+  .headerClass p {
+    font-size: 14px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}

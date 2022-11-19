@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./styles.css";
 import SectionTitle from "../common/SectionTitle";
 import FeatureItem from "./FeatureItem";
 import getProducts from "./FeaturedList";
 import QuickView from "../QuickView/QuickView";
+import FeaturedContext from "../FeaturedContext";
 
-const Featured = ({ featuredItems }) => {
-  const [products, setProducts] = useState([]);
+const Featured = () => {
+  // const [products, setProducts] = useState([]);
   const [popupItem, setPopupItem] = useState(null);
+  const { featuredItems } = useContext(FeaturedContext);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const productsList = await getProducts();
-      setProducts(productsList);
-    };
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     const productsList = await getProducts();
+  //     setProducts(productsList);
+  //   };
 
-    fetchProducts();
-  }, []);
+  //   fetchProducts();
+  // }, []);
 
   return (
     <React.Fragment>
@@ -27,7 +29,7 @@ const Featured = ({ featuredItems }) => {
         <div className="container-wrapper">
           <SectionTitle sectionHeader="Featured" />
           <div className="featured-list">
-            {products.slice(0, 8).map((item) => (
+            {featuredItems.slice(0, 8).map((item) => (
               <FeatureItem item={item} setPopupItem={setPopupItem} />
             ))}
           </div>

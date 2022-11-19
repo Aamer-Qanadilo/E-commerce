@@ -1,4 +1,3 @@
-import React from "react";
 import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
 const delay = 5000;
@@ -8,14 +7,13 @@ const Slider = ({ sliders }) => {
   const timeoutRef = useRef(null);
 
   function resetTimeout() {
-    console.log(timeoutRef, timeoutRef.current);
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
   }
 
   const evaluateIndex = (prevIndex) => {
-    return prevIndex === sliders.length / 2 - 1 ? 0 : prevIndex + 1;
+    return prevIndex === sliders.length / 2 ? 0 : prevIndex + 1;
   };
 
   useEffect(() => {
@@ -36,11 +34,17 @@ const Slider = ({ sliders }) => {
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        {sliders.map((advItem, index) => (
+        <div className="leftAngle">
+          <i className="fa-solid fa-angle-left"></i>
+        </div>
+        {sliders.map((slideItem, index) => (
           <div className="slide" key={index}>
-            {children}
+            {slideItem}
           </div>
         ))}
+        <div className="rightAngle">
+          <i className="fa-solid fa-angle-right"></i>
+        </div>
       </div>
     </div>
   );

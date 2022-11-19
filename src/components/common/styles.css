@@ -7,26 +7,58 @@ h2 {
 /* Slideshow */
 
 .slideshow {
-  margin: 0 auto;
-  overflow: hidden;
+  position: relative;
+  overflow-x: hidden;
   width: 100%;
-  height: 20vh;
 }
 
 .slideshowSlider {
+  /* position: relative; */
   height: 80%;
   white-space: nowrap;
   transition: ease 1000ms;
 }
 
 .slide {
+  position: relative;
   display: inline-block;
-  margin-left: 1%;
+  /* margin-left: 1%; */
   height: auto;
-  width: auto;
+  width: 100%;
   /* border-radius: 40px; */
 }
 
+.leftAngle,
+.rightAngle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.158);
+  z-index: 2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.leftAngle {
+  width: 100px;
+  height: 100px;
+  left: -35px;
+  justify-content: center;
+}
+
+.rightAngle {
+  width: 100px;
+  height: 100px;
+  right: -35px;
+  justify-content: center;
+}
+
+.leftAngle i,
+.rightAngle i {
+  font-size: 3rem;
+  color: white;
+}
 /* .slide img {
   width: 100%;
   height: 100%;

@@ -25,7 +25,7 @@ const QuickView = ({ popupItem: item, setPopupItem }) => {
         </div>
         <div className={styles.quickViewBody}>
           <QuickViewImages
-            item={item}
+            item={{ images: [item.image] }}
             displayedImageIndex={displayedImageIndex}
             setDisplayedImageIndex={setDisplayedImageIndex}
           />
