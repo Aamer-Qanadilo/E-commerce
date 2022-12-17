@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import Popup from "../common/Popup";
 import FeaturedContext from "../FeaturedContext";
 import QuickViewContent from "./QuickViewContent/QuickViewContent";
 import QuickViewImages from "./QuickViewImages";
@@ -10,8 +9,7 @@ const QuickView = ({ popupItem: item, setPopupItem, children }) => {
   const [displayedImageIndex, setDisplayedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   document.body.style.overflow = "hidden";
-  const { getProduct } = useContext(FeaturedContext);
-  console.log(item);
+  const { getProduct, AddToCart } = useContext(FeaturedContext);
 
   return (
     <div

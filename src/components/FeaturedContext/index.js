@@ -1,4 +1,3 @@
-import { Backdrop, CircularProgress } from "@mui/material";
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import Loader from "../common/Loader";

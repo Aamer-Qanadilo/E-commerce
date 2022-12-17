@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./styles.css";
 import SectionTitle from "../common/SectionTitle";
 import FeatureItem from "./FeatureItem";
-import getProducts from "./FeaturedList";
 import FeaturedContext from "../FeaturedContext";
 import PopupQuickView from "../QuickView/PopupQuickView";
 

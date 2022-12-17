@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import AsSeenOnInstagram from "../../components/AsSeenOnInstagram";
 import Container50 from "../../components/common/Container50";
 import CustomerReviews from "../../components/CustomerReviews";

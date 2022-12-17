@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SectionTitle from "../common/SectionTitle";
 import FeatureItem from "../Features/FeatureItem";
 import PopupQuickView from "../QuickView/PopupQuickView";
-import styles from "./styles.module.css";
 
 const ProductPageSuggestion = ({ featuredItems, currentId }) => {
   const [popupItem, setPopupItem] = useState(null);

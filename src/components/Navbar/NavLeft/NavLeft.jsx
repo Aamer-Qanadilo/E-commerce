@@ -3,23 +3,39 @@ import Logo from "./Logo";
 import { NavDropDown } from "./NavDropDown";
 import { NavLink } from "react-router-dom";
 import FeaturedContext from "../../FeaturedContext";
-// import styles from './../Navbar.css';
 import "../styles.css";
 
-const navLink = ["/product-list", "#", "#", "#"];
-
-const NavLeft = () => {
+const NavLeft = ({ showNav }) => {
   const { getFeaturedItems } = useContext(FeaturedContext);
-  const navDropDownList = ["SHOP", "FABRIC", "JOURNAL", "ABOUT"];
+  const navDropDownList = [
+    { text: "SHOP", href: "/product-list" },
+    { text: "FABRIC", href: "#" },
+    { text: "JOURNAL", href: "#" },
+    { text: "ABOUT", href: "#" },
+  ];
+
+  console.log(showNav);
+
   return (
     <div className="nav-left">
       <NavLink to="" onClick={() => getFeaturedItems()}>
         <Logo />
       </NavLink>
       <div className="nav-left-menu">
-        {navDropDownList.map((dropdownItem, index) => (
-          <NavDropDown item={dropdownItem} navLink={navLink[index]} />
-        ))}
+        {navDropDownList.map((dropdownItem, index) =>
+          !showNav ? (
+            index < 1 ? (
+              <NavDropDown
+                item={navDropDownList[0].text}
+                navLink={navDropDownList[0].href}
+              />
+            ) : (
+              <></>
+            )
+          ) : (
+            <NavDropDown item={dropdownItem.text} navLink={dropdownItem.href} />
+          ),
+        )}
       </div>
     </div>
   );

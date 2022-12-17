@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./../styles.module.css";
 import Joi from "joi";
 import QuickViewDescription from "./QuickViewDescription";
 import QuickViewHeader from "./QuickViewHeader";
+import { UserContext } from "../../UserContext/UserContext";
 
 const QuickViewContent = ({ item, quantity, setQuantity }) => {
   const [errors, setErrors] = useState({});
+  const { AddToCart } = useContext(UserContext);
 
   const inputSchema = Joi.object({
     quantity: Joi.number().min(1),
@@ -19,6 +21,11 @@ const QuickViewContent = ({ item, quantity, setQuantity }) => {
     }
     setErrors(null);
     setQuantity(Number(newQuantity));
+  };
+
+  const PushToCart = (event) => {
+    event.preventDefault();
+    AddToCart(item, quantity);
   };
 
   return (
@@ -50,7 +57,9 @@ const QuickViewContent = ({ item, quantity, setQuantity }) => {
               ></button>
             </li>
           </ul>
-          <button className={styles.quickViewAddToCart}>ADD TO CART</button>
+          <button className={styles.quickViewAddToCart} onClick={PushToCart}>
+            ADD TO CART
+          </button>
           <div className={styles.quickViewWishlist}>
             <span>
               <i class="fa-solid fa-question"></i>

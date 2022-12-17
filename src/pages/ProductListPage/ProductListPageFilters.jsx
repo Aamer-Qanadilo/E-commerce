@@ -1,7 +1,4 @@
-import axios from "axios";
 import React, { useContext } from "react";
-import { useState } from "react";
-import { useEffect } from "react";
 import FeaturedContext from "../../components/FeaturedContext";
 import styles from "./styles.module.css";
 
