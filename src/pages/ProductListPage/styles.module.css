@@ -121,6 +121,10 @@
   width: 32% !important;
 }
 
+.productListHeader {
+  text-transform: capitalize;
+}
+
 @media (max-width: 1000px) {
   .productListNav > div > ul > li:first-child {
     font-size: 16px;

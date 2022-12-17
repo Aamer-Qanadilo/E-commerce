@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import About from "../../components/About/About";
 import Explore from "../../components/Explore/Explore";
 import Featured from "../../components/Features/Featured";
@@ -10,12 +10,18 @@ import Sponsors from "../../components/Sponsors/Sponsors";
 import exploreContent from "../../components/Explore/ExploreArr";
 import Footer from "../../components/Footer/Footer";
 import Slider from "../../components/common/Slider";
+import FeaturedContext from "../../components/FeaturedContext";
 
 const Homepage = ({ featuredItems }) => {
+  const { getFeaturedItems } = useContext(FeaturedContext);
   const headerBackgrounds = [
     "/assets/images/header.png",
     "/assets/images/header2.png",
   ];
+
+  // useEffect(() => {
+  //   getFeaturedItems();
+  // }, []);
 
   return (
     <React.Fragment>

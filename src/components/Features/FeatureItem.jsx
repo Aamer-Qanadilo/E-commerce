@@ -1,6 +1,11 @@
 import React from "react";
 
-const FeatureItem = ({ productCardClass, item, setPopupItem }) => {
+const FeatureItem = ({
+  productCardClass,
+  item,
+  setPopupItem,
+  isNewItem = false,
+}) => {
   return (
     <div
       className={`featured-item ${productCardClass ? productCardClass : ""}`}
@@ -10,8 +15,8 @@ const FeatureItem = ({ productCardClass, item, setPopupItem }) => {
           style={{ backgroundImage: `url(${item.thumbnail})` }}
           className="featured-item__img-img"
         ></div> */}
-        <img src={item.image} alt="Featured item image" />
-        {item.new ? <p className="featured-item__img--new">NEW</p> : <></>}
+        <img src={item.image} alt="Featured item" />
+        {isNewItem ? <p className="featured-item__img--new">NEW</p> : <></>}
         <div className="featured-item__img--mask">
           <button onClick={() => setPopupItem(item)}>QUICK VIEW</button>
         </div>

@@ -1,12 +1,15 @@
 import { Backdrop, CircularProgress } from "@mui/material";
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import Loader from "../common/Loader";
 
 const FeaturedContext = createContext([]);
 
 export const FeaturedProvider = ({ children }) => {
   const [featuredItems, setFeaturedItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState({});
+  const [categories, setCategories] = useState([]);
 
   const getFeaturedItems = async () => {
     setLoading(true);
@@ -16,41 +19,50 @@ export const FeaturedProvider = ({ children }) => {
   };
 
   const filterFeaturedItems = async (filter) => {
-    setLoading(true);
-
     const response = await axios.get(
       `https://fakestoreapi.com/products/category/${filter}`,
     );
     setFeaturedItems(await response.data);
   };
 
+  const getProduct = async (id) => {
+    setLoading(true);
+    const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    console.log(response);
+    console.log(await response.data);
+    setProduct(await response.data);
+  };
+
+  const getCategories = async () => {
+    const response = await axios.get(
+      "https://fakestoreapi.com/products/categories",
+    );
+    setCategories(response.data);
+  };
+
   useEffect(() => {
     getFeaturedItems();
+    getCategories();
   }, []);
 
   useEffect(() => {
-    setLoading(false);
-  }, [featuredItems]);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, [featuredItems, product]);
 
   return (
     <FeaturedContext.Provider
-      value={{ featuredItems, filterFeaturedItems, getFeaturedItems }}
+      value={{
+        featuredItems,
+        product,
+        categories,
+        filterFeaturedItems,
+        getFeaturedItems,
+        getProduct,
+      }}
     >
-      {loading ? (
-        <Backdrop
-          sx={{
-            color: "#fff",
-            zIndex: (theme) => theme.zIndex.drawer + 1,
-          }}
-          open={loading}
-          onClick={() => setLoading(false)}
-        >
-          <CircularProgress color="inherit" />
-        </Backdrop>
-      ) : (
-        <></>
-      )}
-      {children}
+      {loading ? <Loader /> : children}
     </FeaturedContext.Provider>
   );
 };

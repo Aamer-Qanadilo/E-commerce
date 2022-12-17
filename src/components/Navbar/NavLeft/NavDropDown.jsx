@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "../styles.css";
 
-export const NavDropDown = ({ item }) => {
+export const NavDropDown = ({ item, navLink }) => {
   return (
-    <NavLink to="/product-list" className="nav-dropdown-item">
-      <p to="/product-list">{item}</p>
+    <NavLink to={navLink} className="nav-dropdown-item">
+      <p>{item}</p>
       <i class="fa-solid fa-angle-down"></i>
     </NavLink>
   );

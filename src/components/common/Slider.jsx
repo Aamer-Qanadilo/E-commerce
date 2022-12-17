@@ -12,6 +12,16 @@ const Slider = ({ sliders }) => {
     }
   }
 
+  const changeIndex = (newIndex) => {
+    if (newIndex < 0) {
+      setIndex(sliders.length - 1);
+    } else if (newIndex >= sliders.length) {
+      setIndex(0);
+    } else {
+      setIndex(newIndex);
+    }
+  };
+
   const evaluateIndex = (prevIndex) => {
     return prevIndex === sliders.length / 2 ? 0 : prevIndex + 1;
   };
@@ -30,21 +40,21 @@ const Slider = ({ sliders }) => {
 
   return (
     <div className="slideshow">
+      <div className="leftAngle" onClick={() => changeIndex(index - 1)}>
+        <i className="fa-solid fa-angle-left"></i>
+      </div>
       <div
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        <div className="leftAngle">
-          <i className="fa-solid fa-angle-left"></i>
-        </div>
         {sliders.map((slideItem, index) => (
           <div className="slide" key={index}>
             {slideItem}
           </div>
         ))}
-        <div className="rightAngle">
-          <i className="fa-solid fa-angle-right"></i>
-        </div>
+      </div>
+      <div className="rightAngle" onClick={() => changeIndex(index + 1)}>
+        <i className="fa-solid fa-angle-right"></i>
       </div>
     </div>
   );

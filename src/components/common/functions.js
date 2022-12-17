@@ -1,4 +1,4 @@
-const findStars = (itemStars) => {
+const FindStars = (itemStars) => {
   let stars = itemStars;
   let starsContainer = [];
   for (let i = 0; i < 5; i++) {
@@ -26,5 +26,5 @@ const findStars = (itemStars) => {
 };
 
 export default {
-  findStars,
+  FindStars,
 };

@@ -5,22 +5,12 @@ import { useEffect } from "react";
 import FeaturedContext from "../../components/FeaturedContext";
 import styles from "./styles.module.css";
 
-const ProductListPageFilters = ({ filter, setFilter }) => {
-  const [categories, setCategories] = useState([]);
-  const { filterFeaturedItems, getFeaturedItems } = useContext(FeaturedContext);
-
-  const getCategories = async () => {
-    const response = await axios.get(
-      "https://fakestoreapi.com/products/categories",
-    );
-    setCategories(response.data);
-  };
-
-  useEffect(() => {
-    getCategories();
-  }, []);
+const ProductListPageFilters = ({ filter, setFilter, setFilterLoading }) => {
+  const { filterFeaturedItems, getFeaturedItems, categories } =
+    useContext(FeaturedContext);
 
   const filterProducts = (category) => {
+    setFilterLoading(true);
     if (filter !== category) {
       filterFeaturedItems(category);
       setFilter(category);

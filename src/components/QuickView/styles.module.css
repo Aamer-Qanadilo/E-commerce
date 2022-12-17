@@ -1,5 +1,5 @@
 .quickViewContainer {
-  width: 70%;
+  width: 100%;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -269,15 +269,19 @@
   padding-bottom: 30px;
 }
 
-.quickViewFooter button {
+.quickViewFooter a {
+  text-decoration: none;
   cursor: pointer;
   text-transform: uppercase;
   height: fit-content;
   padding: 10px 33px;
   letter-spacing: 2px;
+  color: #ffffff;
+  background-color: #33333a;
+  font-weight: 700;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .quickViewContainer {
     box-sizing: border-box;
     width: 100%;
@@ -286,9 +290,26 @@
   }
   .quickViewBody {
     flex-direction: column;
+    gap: 25px;
     width: 100%;
   }
   .quickViewBody > div {
     width: 100%;
   }
+}
+
+/* Single Product Styles */
+.quickViewProductContainer {
+  height: auto;
+  min-height: 100vh;
+}
+
+.quickViewNavSingleProduct > * {
+  width: 80%;
+  margin: 0 auto !important;
+}
+
+.quickViewProductBody {
+  width: 80%;
+  margin: 0 auto;
 }

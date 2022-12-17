@@ -3,8 +3,8 @@ import "./styles.css";
 import SectionTitle from "../common/SectionTitle";
 import FeatureItem from "./FeatureItem";
 import getProducts from "./FeaturedList";
-import QuickView from "../QuickView/QuickView";
 import FeaturedContext from "../FeaturedContext";
+import PopupQuickView from "../QuickView/PopupQuickView";
 
 const Featured = () => {
   // const [products, setProducts] = useState([]);
@@ -23,14 +23,18 @@ const Featured = () => {
   return (
     <React.Fragment>
       {popupItem && (
-        <QuickView popupItem={popupItem} setPopupItem={setPopupItem} />
+        <PopupQuickView popupItem={popupItem} setPopupItem={setPopupItem} />
       )}
       <section className="featured">
         <div className="container-wrapper">
           <SectionTitle sectionHeader="Featured" />
           <div className="featured-list">
             {featuredItems.slice(0, 8).map((item) => (
-              <FeatureItem item={item} setPopupItem={setPopupItem} />
+              <FeatureItem
+                item={item}
+                setPopupItem={setPopupItem}
+                isNewItem={true}
+              />
             ))}
           </div>
         </div>
