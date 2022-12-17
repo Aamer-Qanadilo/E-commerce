@@ -22,7 +22,7 @@ const ProductListPage = () => {
   const [sortBy, setSortBy] = useState("Price");
   const [productsSize, setProductsSize] = useState(12);
   const [filterLoading, setFilterLoading] = useState(false);
-  const { featuredItems, getFeaturedItems } = useContext(FeaturedContext);
+  const { featuredItems } = useContext(FeaturedContext);
 
   const handleChange = (event) => {
     setSortBy(event.target.value);
@@ -30,7 +30,7 @@ const ProductListPage = () => {
 
   useEffect(() => {
     setFilterLoading(false);
-  }, featuredItems);
+  }, [featuredItems]);
 
   // useEffect(() => {
   //   return () => {
