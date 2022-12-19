@@ -57,7 +57,6 @@ const Login = () => {
 
     const error = functions.validateInput(name, value, schema.extract(name));
     const newErrors = { ...errors, ...error };
-    console.log(newErrors);
     setErrors(newErrors);
   };
 
@@ -71,7 +70,6 @@ const Login = () => {
 
     if (formErrors) {
       newErrors = { ...newErrors, ...formErrors };
-      console.log(newErrors);
       setErrors(newErrors);
 
       return;

@@ -14,8 +14,6 @@ const NavLeft = ({ showNav }) => {
     { text: "ABOUT", href: "#" },
   ];
 
-  console.log(showNav);
-
   return (
     <div className="nav-left">
       <NavLink to="" onClick={() => getFeaturedItems()}>

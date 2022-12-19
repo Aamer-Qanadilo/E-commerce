@@ -12,8 +12,6 @@ const Cart = () => {
   const { cart, setCart } = useContext(UserContext);
   const navigate = useNavigate();
 
-  console.log(cart);
-
   useEffect(() => {
     document.body.style.overflow = "auto";
   }, []);

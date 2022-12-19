@@ -10,8 +10,6 @@ const CartCard = ({ item, index }) => {
 
   const { updateCart, deleteCart } = useContext(UserContext);
 
-  console.log(item, index);
-
   const changeQuantity = (inputValue) => {
     if (inputValue <= 0) {
       deleteCart(item, index);

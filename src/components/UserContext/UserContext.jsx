@@ -44,13 +44,11 @@ export const UserProvider = ({ children }) => {
   const deleteCart = (product, index) => {
     const tempCart = [...cart];
     tempCart.splice(index, 1);
-    console.log(tempCart);
     setCart(tempCart);
   };
 
   useEffect(() => {
     cookies.save("cart", cart);
-    console.log(cart);
   }, [cart]);
 
   return (

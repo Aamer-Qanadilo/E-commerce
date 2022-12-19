@@ -3,7 +3,6 @@ import styles from "./../styles.module.css";
 import functions from "../../common/functions";
 
 const QuickViewHeader = ({ item }) => {
-  console.log(item);
   return (
     <div className={styles.quickViewContentHeader}>
       <h3>{item.title}</h3>

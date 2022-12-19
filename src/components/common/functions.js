@@ -28,7 +28,6 @@ const FindStars = (itemStars) => {
 };
 
 const findPrice = (price) => {
-  console.log(price);
   return (
     price[0] + "." + (price.length === 2 ? price[1].substring(0, 2) : "00")
   );

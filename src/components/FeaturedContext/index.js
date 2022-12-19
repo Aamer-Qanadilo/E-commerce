@@ -27,8 +27,6 @@ export const FeaturedProvider = ({ children }) => {
   const getProduct = async (id) => {
     setLoading(true);
     const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
-    console.log(response);
-    console.log(await response.data);
     setProduct(await response.data);
   };
 
