@@ -10,7 +10,7 @@ const Explore = ({ exploreContent }) => {
         <SectionTitle sectionHeader="Explore" />
         <div className={styles.exploreSectionBody}>
           {exploreContent.map((explore, index) => (
-            <ExploreCard exploreItem={explore} index={index} />
+            <ExploreCard key={index} exploreItem={explore} index={index} />
           ))}
         </div>
         <button>See the journal</button>

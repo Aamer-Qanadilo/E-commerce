@@ -26,8 +26,8 @@ const Homepage = ({ featuredItems }) => {
   return (
     <React.Fragment>
       <Slider
-        sliders={headerBackgrounds.map((background) => (
-          <Header headerBackground={background}>
+        sliders={headerBackgrounds.map((background, index) => (
+          <Header key={index} headerBackground={background}>
             <h1>Perfume Tips Tricks</h1>
             <button>Shop Now</button>
           </Header>

@@ -12,7 +12,7 @@ export const UserProvider = ({ children }) => {
     let flag = true;
     tempCart.forEach((cartItem, index) => {
       if (cartItem.id == product.id) {
-        const newQuantity = quantity + cartItem.quantity;
+        const newQuantity = Number(quantity) + Number(cartItem.quantity);
         const productItem = { ...product, quantity: newQuantity };
         tempCart.splice(index, 1, productItem);
         flag = false;
@@ -25,12 +25,46 @@ export const UserProvider = ({ children }) => {
     setCart(tempCart);
   };
 
+  const updateCart = (product, quantity) => {
+    const tempCart = [...cart];
+    tempCart.forEach((cartItem, index) => {
+      if (cartItem.id == product.id) {
+        const productItem = { ...product, quantity };
+        if (quantity === 0) {
+          deleteCart(product, index);
+          return;
+        }
+        tempCart.splice(index, 1, productItem);
+        setCart(tempCart);
+        return;
+      }
+    });
+  };
+
+  const deleteCart = (product, index) => {
+    const tempCart = [...cart];
+    tempCart.splice(index, 1);
+    console.log(tempCart);
+    setCart(tempCart);
+  };
+
   useEffect(() => {
     cookies.save("cart", cart);
+    console.log(cart);
   }, [cart]);
 
   return (
-    <UserContext.Provider value={{ user, cart, setUser, setCart, AddToCart }}>
+    <UserContext.Provider
+      value={{
+        user,
+        cart,
+        setUser,
+        setCart,
+        AddToCart,
+        updateCart,
+        deleteCart,
+      }}
+    >
       {children}
     </UserContext.Provider>
   );

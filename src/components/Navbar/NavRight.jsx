@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext/UserContext";
 import "./styles.css";
 
 const NavRight = ({ showNav }) => {
   const { cart } = useContext(UserContext);
+  const navigate = useNavigate();
 
   return (
     <div className="nav-right">
@@ -20,7 +21,7 @@ const NavRight = ({ showNav }) => {
         className="cartButton"
         onClick={(e) => {
           e.preventDefault();
-          console.log(cart);
+          navigate({ pathname: "/cart" });
         }}
       >
         <img src="/assets/icons/Shape.svg" alt="" />

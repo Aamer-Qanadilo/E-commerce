@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Cart from "./components/Cart";
 import Layout from "./components/Layout";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -17,6 +18,7 @@ const PageRouter = () => {
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -29,8 +29,8 @@ const ProductListPageFilters = ({ filter, setFilter, setFilterLoading }) => {
         <span onClick={resetFilter}>RESET</span>
       </p>
       <ul>
-        {categories.map((category) => (
-          <li onClick={() => filterProducts(category)}>
+        {categories.map((category, index) => (
+          <li key={index} onClick={() => filterProducts(category)}>
             <span>{category}</span>
             {filter === category ? (
               <i class="fa fa-angle-up" aria-hidden="true"></i>

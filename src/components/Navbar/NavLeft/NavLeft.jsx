@@ -26,6 +26,7 @@ const NavLeft = ({ showNav }) => {
           !showNav ? (
             index < 1 ? (
               <NavDropDown
+                key={index}
                 item={navDropDownList[0].text}
                 navLink={navDropDownList[0].href}
               />

@@ -8,7 +8,6 @@ import styles from "./styles.module.css";
 const QuickView = ({ popupItem: item, setPopupItem, children }) => {
   const [displayedImageIndex, setDisplayedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  document.body.style.overflow = "hidden";
   const { getProduct, AddToCart } = useContext(FeaturedContext);
 
   return (

@@ -24,8 +24,8 @@ const AsSeenOnInstagram = () => {
     <Container80>
       <SectionTitle sectionHeader="As Seen On Instagram" />
       <div className={styles.asSeenOnInstagramContainer}>
-        {instagramCards.map((card) => (
-          <InstagramCard item={card} />
+        {instagramCards.map((card, index) => (
+          <InstagramCard key={index} item={card} />
         ))}
       </div>
     </Container80>

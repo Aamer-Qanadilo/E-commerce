@@ -18,8 +18,9 @@ const ProductPageSuggestion = ({ featuredItems, currentId }) => {
             {featuredItems
               .filter((item) => item.id !== currentId)
               .slice(0, 4)
-              .map((item) => (
+              .map((item, index) => (
                 <FeatureItem
+                  key={index}
                   item={item}
                   setPopupItem={setPopupItem}
                   isNewItem={true}

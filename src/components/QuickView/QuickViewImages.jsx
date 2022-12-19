@@ -11,6 +11,7 @@ const QuickViewImages = ({
       <div className={styles.quickViewImagesChooser}>
         {item.images.map((image, index) => (
           <div
+            key={index}
             className={
               styles.quickViewImagesOption +
               " " +

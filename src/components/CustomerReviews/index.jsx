@@ -22,8 +22,8 @@ const CustomerReviews = () => {
   return (
     <Container50>
       <SectionTitle sectionHeader="Customer Reviews" />
-      {reviews.map((review) => (
-        <Review reviewItem={review} />
+      {reviews.map((review, index) => (
+        <Review key={index} reviewItem={review} />
       ))}
     </Container50>
   );

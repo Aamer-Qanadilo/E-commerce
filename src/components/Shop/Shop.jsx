@@ -9,8 +9,8 @@ const Shop = () => {
       <div className="container-wrapper">
         <SectionTitle sectionHeader="Shop" />
         <div className="shop-body">
-          {shopItems.map((item) => (
-            <ShopItem item={item} />
+          {shopItems.map((item, index) => (
+            <ShopItem key={index} item={item} />
           ))}
         </div>
       </div>

@@ -87,8 +87,9 @@ const ProductListPage = () => {
         <div className="featured-list">
           {(featuredItemsSorted.length ? featuredItemsSorted : featuredItems)
             .slice(0, productsSize)
-            .map((item) => (
+            .map((item, index) => (
               <FeatureItem
+                key={index}
                 productCardClass={styles.productListCard}
                 item={item}
                 setPopupItem={setPopupItem}

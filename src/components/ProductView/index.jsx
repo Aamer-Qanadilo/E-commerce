@@ -22,8 +22,8 @@ const ProductView = () => {
   return (
     <Container80>
       <div className={styles.productViewCards}>
-        {productViewCards.map((card) => (
-          <ProductViewCard productViewCardItem={card} />
+        {productViewCards.map((card, index) => (
+          <ProductViewCard key={index} productViewCardItem={card} />
         ))}
       </div>
     </Container80>

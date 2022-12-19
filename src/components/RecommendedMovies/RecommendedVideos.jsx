@@ -24,8 +24,8 @@ const RecommendedVideos = () => {
       <div className="container-wrapper">
         <SectionTitle sectionHeader="Recommended Videos" />
         <div className="recommended-videos__body">
-          {videos.map((video) => (
-            <VideoCard {...video} />
+          {videos.map((video, index) => (
+            <VideoCard key={index} {...video} />
           ))}
         </div>
         <button className="recommended-videos-button">Show More</button>

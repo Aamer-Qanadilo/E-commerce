@@ -30,6 +30,7 @@ const Featured = () => {
           <div className="featured-list">
             {featuredItems.slice(0, 8).map((item) => (
               <FeatureItem
+                key={item.id}
                 item={item}
                 setPopupItem={setPopupItem}
                 isNewItem={true}
