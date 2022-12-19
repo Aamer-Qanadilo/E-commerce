@@ -4,13 +4,19 @@ import { UserContext } from "../UserContext/UserContext";
 import "./styles.css";
 
 const NavRight = ({ showNav }) => {
-  const { cart } = useContext(UserContext);
+  const { cart, user } = useContext(UserContext);
   const navigate = useNavigate();
 
   return (
     <div className="nav-right">
-      <Link to="/login">Login</Link>
-      <Link to="/register">Register</Link>
+      {!user ? (
+        <>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+        </>
+      ) : (
+        <></>
+      )}
       {/* <button>
         <img src="/assets/icons/search.svg" alt="" />
       </button>

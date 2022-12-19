@@ -1,10 +1,11 @@
+import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import cookies from "react-cookies";
 
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(cookies.load("token") || {});
+  const [user, setUser] = useState(cookies.load("token"));
   const [cart, setCart] = useState(cookies.load("cart") || []);
 
   const AddToCart = (product, quantity) => {
@@ -50,6 +51,10 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     cookies.save("cart", cart);
   }, [cart]);
+
+  useEffect(() => {
+    if (user) cookies.save("token", user);
+  }, [user]);
 
   return (
     <UserContext.Provider

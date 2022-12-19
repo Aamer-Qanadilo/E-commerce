@@ -2,17 +2,20 @@ import { Box, Button, TextField } from "@mui/material";
 import Joi from "joi";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SectionTitle from "../common/SectionTitle";
 import functions from "../common/functions";
 import styles from "./styles.module.css";
 import { useContext } from "react";
 import { UserContext } from "../UserContext/UserContext";
 import InputField from "../common/InputField";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const [loadingForm, setLoadingForm] = useState(false);
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const [inputFields, setInputFields] = useState({
     name: "",
@@ -29,7 +32,7 @@ const Register = () => {
   });
 
   const schema = Joi.object({
-    firstName: Joi.string().min(3).max(25).required().label("Name"),
+    name: Joi.string().min(3).max(25).required().label("Name"),
     password: Joi.string()
       .max(40)
       .regex(
@@ -68,7 +71,7 @@ const Register = () => {
     setErrors(newErrors);
   };
 
-  const submitForm = () => {
+  const submitForm = async () => {
     let newErrors = { ...errors };
     const formErrors = functions.validateForm(inputFields, schema, {
       abortEarly: false,
@@ -81,6 +84,19 @@ const Register = () => {
       setErrors(newErrors);
 
       return;
+    }
+
+    const { data } = await axios.post(
+      "http://localhost:3000/api/v1/auth/signup",
+      inputFields,
+    );
+
+    if (data.message === "success") {
+      toast.success("Registered successfully!");
+      navigate({ pathname: "/login" });
+      return;
+    } else {
+      toast.error(data.message);
     }
   };
 

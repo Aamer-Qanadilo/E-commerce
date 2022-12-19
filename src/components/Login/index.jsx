@@ -1,7 +1,7 @@
 import { Box, Button, TextField } from "@mui/material";
 import Joi from "joi";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SectionTitle from "../common/SectionTitle";
 import functions from "../common/functions";
 import styles from "./styles.module.css";
@@ -9,10 +9,13 @@ import { useContext } from "react";
 import { UserContext } from "../UserContext/UserContext";
 import { useEffect } from "react";
 import InputField from "../common/InputField";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [loadingForm, setLoadingForm] = useState(false);
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const [inputFields, setInputFields] = useState({
     email: "",
@@ -60,7 +63,7 @@ const Login = () => {
     setErrors(newErrors);
   };
 
-  const submitForm = () => {
+  const submitForm = async () => {
     let newErrors = { ...errors };
     const formErrors = functions.validateForm(inputFields, schema, {
       abortEarly: false,
@@ -73,6 +76,20 @@ const Login = () => {
       setErrors(newErrors);
 
       return;
+    }
+
+    const { data } = await axios.post(
+      "http://localhost:3000/api/v1/auth/signIn",
+      inputFields,
+    );
+
+    if (data.message === "success") {
+      toast.success("Welcome back.");
+      setUser(data.loginToken);
+      navigate({ pathname: "/" });
+      return;
+    } else {
+      toast.error(data.message);
     }
   };
 
