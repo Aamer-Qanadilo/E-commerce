@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import cookies from "react-cookies";
+import swal from "sweetalert";
 
 export const UserContext = createContext();
 
@@ -42,10 +43,20 @@ export const UserProvider = ({ children }) => {
     });
   };
 
-  const deleteCart = (product, index) => {
-    const tempCart = [...cart];
-    tempCart.splice(index, 1);
-    setCart(tempCart);
+  const deleteCart = async (product, index) => {
+    const willDelete = await swal({
+      title: "Are you sure?",
+      text: "Are you sure that you want to delete this file?",
+      icon: "warning",
+      dangerMode: true,
+    });
+
+    if (willDelete) {
+      const tempCart = [...cart];
+      tempCart.splice(index, 1);
+      setCart(tempCart);
+      swal("Deleted!", "Your imaginary file has been deleted!", "success");
+    }
   };
 
   useEffect(() => {

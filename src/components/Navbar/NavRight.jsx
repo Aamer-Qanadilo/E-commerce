@@ -3,12 +3,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext/UserContext";
 import "./styles.css";
 
-const NavRight = ({ showNav }) => {
+const NavRight = ({ setIsOpen, isOpen }) => {
   const { cart, user } = useContext(UserContext);
   const navigate = useNavigate();
 
   return (
     <div className="nav-right">
+      <div onClick={() => setIsOpen(!isOpen)} className="navButton">
+        <i className="fa-solid fa-bars"></i>
+      </div>
       {!user ? (
         <>
           <Link to="/login">Login</Link>

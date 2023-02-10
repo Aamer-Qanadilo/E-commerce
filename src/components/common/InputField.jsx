@@ -12,6 +12,7 @@ const InputField = ({ id, label, type, variant, name, onChange, error }) => {
         variant={variant}
         name={name}
         onChange={onChange}
+        
       />
       {error && (
         <div className="alert alert-danger">{error.split('"').join("")}</div>

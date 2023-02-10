@@ -15,7 +15,11 @@ const FeatureItem = ({
           style={{ backgroundImage: `url(${item.thumbnail})` }}
           className="featured-item__img-img"
         ></div> */}
-        <img src={item.image} alt="Featured item" />
+        <div
+          className={"cartCardImage"}
+          style={{ backgroundImage: `url(${item.image})` }}
+        ></div>
+        {/* <img src={item.image} alt="Featured item" /> */}
         {isNewItem ? <p className="featured-item__img--new">NEW</p> : <></>}
         <div className="featured-item__img--mask">
           <button onClick={() => setPopupItem(item)}>QUICK VIEW</button>

@@ -22,9 +22,7 @@ const PageRouter = () => {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </>
-          ) : (
-            <></>
-          )}
+          ) : null}
           <Route index element={<Homepage />} />
           <Route path="/product-list" element={<ProductListPage />} />
           <Route path="/product/:id" element={<ProductPage />} />

@@ -17,7 +17,7 @@
 .cartCard {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   padding: 25px 50px;
   background-color: white;
   box-shadow: 1px 1px 5px;
@@ -56,4 +56,16 @@
 .cartCardInfoSecondary i {
   color: red;
   font-size: 24px;
+}
+
+@media (max-width: 1100px) {
+  .cartCardInfoMain {
+    flex-direction: column;
+  }
+  
+  .cartCard {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
 }
