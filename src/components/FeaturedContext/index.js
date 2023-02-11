@@ -13,28 +13,45 @@ export const FeaturedProvider = ({ children }) => {
   const getFeaturedItems = async () => {
     setLoading(true);
 
-    const response = await axios.get("https://fakestoreapi.com/products");
-    setFeaturedItems(await response.data);
+    // let response = await axios.get("https://fakestoreapi.com/products");
+    // setFeaturedItems(await response.data);
+
+    let response = await axios.get("https://dummyjson.com/products");
+    setFeaturedItems(await response.data.products);
+
+    // if (response.status !== 200) {
+    //   return;
+    // }
   };
 
   const filterFeaturedItems = async (filter) => {
+    // const response = await axios.get(
+    //   `https://fakestoreapi.com/products/category/${filter}`,
+    // );
+    // setFeaturedItems(await response.data);
     const response = await axios.get(
-      `https://fakestoreapi.com/products/category/${filter}`,
+      `https://dummyjson.com/products/category/${filter}`,
     );
-    setFeaturedItems(await response.data);
+    setFeaturedItems(await response.data.products);
   };
 
   const getProduct = async (id) => {
     setLoading(true);
-    const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    // const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    // setProduct(await response.data);
+    const response = await axios.get(`https://dummyjson.com/products/${id}`);
     setProduct(await response.data);
   };
 
   const getCategories = async () => {
+    // const response = await axios.get(
+    //   "https://fakestoreapi.com/products/categories",
+    // );
     const response = await axios.get(
-      "https://fakestoreapi.com/products/categories",
+      "https://dummyjson.com/products/categories",
     );
-    setCategories(response.data);
+
+    if (response.data?.length > 5) setCategories(response.data.slice(0, 5));
   };
 
   useEffect(() => {

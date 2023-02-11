@@ -2,11 +2,11 @@ import React from "react";
 import styles from "../styles.module.css";
 import * as MaterialUI from "@mui/material";
 
-const ProductListNav = ({ sortBy, onChange }) => {
+const ProductListNav = ({ filter, sortBy, onChange }) => {
   return (
     <div className={styles.productListNav}>
       <div className={styles.productContainer}>
-        <p>Women</p>
+        <p style={{ textTransform: "capitalize" }}>{filter}</p>
         <ul>
           <li>Sort by</li>
           <li>

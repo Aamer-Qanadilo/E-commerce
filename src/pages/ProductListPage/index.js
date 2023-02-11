@@ -12,7 +12,7 @@ import { Backdrop, CircularProgress } from "@mui/material";
 
 const sortProducts = {
   Price: "price",
-  Rate: "rating.rate",
+  Rate: "rating",
   Size: "size",
 };
 
@@ -77,7 +77,13 @@ const ProductListPage = () => {
         <PopupQuickView popupItem={popupItem} setPopupItem={setPopupItem} />
       )}
       {<ProductListHeader filter={filter} />}
-      {<ProductListNav sortBy={sortBy} onChange={handleChange} />}
+      {
+        <ProductListNav
+          filter={filter}
+          sortBy={sortBy}
+          onChange={handleChange}
+        />
+      }
       <div className={styles.productListPageContainer}>
         <ProductListPageFilters
           filter={filter}

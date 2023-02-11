@@ -48,11 +48,19 @@ const QuickView = ({ popupItem: item, setPopupItem, children }) => {
           (setPopupItem ? "" : styles.quickViewProductBody)
         }
       >
-        <QuickViewImages
-          item={{ images: [item.image] }}
-          displayedImageIndex={displayedImageIndex}
-          setDisplayedImageIndex={setDisplayedImageIndex}
-        />
+        {item.images ? (
+          <QuickViewImages
+            item={{ images: [...item.images] }}
+            displayedImageIndex={displayedImageIndex}
+            setDisplayedImageIndex={setDisplayedImageIndex}
+          />
+        ) : (
+          <QuickViewImages
+            item={{ images: [item.image] }}
+            displayedImageIndex={displayedImageIndex}
+            setDisplayedImageIndex={setDisplayedImageIndex}
+          />
+        )}
         <QuickViewContent
           item={item}
           quantity={quantity}

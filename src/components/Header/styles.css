@@ -13,7 +13,7 @@ header h1 {
   background-color: transparent;
   color: #ffffff;
   font-size: 60px;
-  max-width: 12ch;
+  /* max-width: 12ch; */
   line-height: 80px;
   font-weight: 400;
 }
@@ -34,10 +34,44 @@ header button {
   cursor: pointer;
 }
 
+@media (max-width: 1750px) {
+  header button,
+  header h1 {
+    left: 60%;
+  }
+}
+
+@media (max-width: 1300px) {
+  header button,
+  header h1 {
+    left: 50%;
+  }
+}
+
 @media (max-width: 1100px) {
   header button,
   header h1 {
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 700px) {
+  header button {
+    font-size: 10px;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 350px) {
+  header button {
+    font-size: 10px;
+  }
+
+  header h1 {
+    font-size: 30px;
   }
 }

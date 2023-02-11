@@ -14,7 +14,7 @@ const NavRight = ({ navDropDownList }) => {
       {/* <div onClick={() => setIsOpen(!isOpen)} className="navButton">
         <i className="fa-solid fa-bars"></i>
       </div> */}
-      <Menu right pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
+      <Menu right noOverlay>
         {navDropDownList.map((dropdownItem, index) => (
           <Link
             to={dropdownItem.href}

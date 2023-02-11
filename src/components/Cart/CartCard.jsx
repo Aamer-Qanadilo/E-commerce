@@ -24,7 +24,7 @@ const CartCard = ({ item, index }) => {
       <div className={styles.cartCardInfoMain}>
         <div
           className={styles.cartCardImage}
-          style={{ backgroundImage: `url(${item.image})` }}
+          style={{ backgroundImage: `url(${item.image || item.images[0]})` }}
         ></div>
         <h3>
           {item?.title.length <= 25

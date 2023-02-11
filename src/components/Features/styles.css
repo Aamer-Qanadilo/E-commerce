@@ -28,7 +28,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 /* .featured-item__img-img {
@@ -50,7 +50,6 @@
   align-items: center;
   justify-content: center;
   /* border: 1px solid black; */
-
 }
 
 .cartCardImage {
@@ -131,7 +130,7 @@
 
 @media (max-width: 600px) {
   .featured-list {
-     column-gap: 2%;
+    column-gap: 2%;
   }
 
   .featured-list .featured-item {

@@ -9,8 +9,8 @@ const QuickViewHeader = ({ item }) => {
       <div className={styles.quickViewContentSecondaryHeader}>
         <p>USD {item.price}</p>
         <ul>
-          {functions.FindStars(item.rating?.rate)}
-          <li>{item.rating?.rate} of 5</li>
+          {functions.FindStars(item.rating)}
+          <li>{item.rating} of 5</li>
         </ul>
       </div>
     </div>

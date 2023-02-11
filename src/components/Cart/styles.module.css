@@ -91,10 +91,21 @@
   .cartCardInfoMain {
     flex-direction: column;
   }
-  
+
   .cartCard {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cartCardInfoSecondary > * {
+    width: 40%;
+    margin-top: 40px;
+  }
+  .cartCardInfoSecondary {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

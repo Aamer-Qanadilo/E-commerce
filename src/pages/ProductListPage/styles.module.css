@@ -149,7 +149,7 @@
     gap: 40px;
   }
   .productListPageContainer > div {
-    width: 80% !important;
+    width: 95% !important;
   }
   .productListPageContainer > div:last-child {
     gap: 20px;

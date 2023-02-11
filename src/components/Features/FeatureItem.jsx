@@ -17,7 +17,7 @@ const FeatureItem = ({
         ></div> */}
         <div
           className={"cartCardImage"}
-          style={{ backgroundImage: `url(${item.image})` }}
+          style={{ backgroundImage: `url(${item.image || item.images[0]})` }}
         ></div>
         {/* <img src={item.image} alt="Featured item" /> */}
         {isNewItem ? <p className="featured-item__img--new">NEW</p> : <></>}

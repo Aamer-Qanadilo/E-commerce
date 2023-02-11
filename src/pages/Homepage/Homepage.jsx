@@ -48,7 +48,6 @@ const Homepage = ({ featuredItems }) => {
         <RecommendedVideos />
         <Sponsors />
       </Suspense>
-      <Footer />
     </React.Fragment>
   );
 };
