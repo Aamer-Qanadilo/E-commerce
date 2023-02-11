@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { Menu, Item } from "burger-menu";
+// import { Menu, Item } from "burger-menu";
 import { useState } from "react";
 import NavLeft from "./NavLeft/NavLeft";
 import NavRight from "./NavRight";
 import "./styles.css";
 import { NavDropDown } from "./NavLeft/NavDropDown";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const navDropDownList = [
   { text: "SHOP", href: "/product-list" },
@@ -34,8 +34,14 @@ const Navbar = () => {
           setIsOpen={setIsOpen}
           navDropDownList={navDropDownList}
         />
-        <NavRight showNav={showNav} isOpen={isOpen} setIsOpen={setIsOpen} />
-        <Menu
+        <NavRight
+          showNav={showNav}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          navDropDownList={navDropDownList}
+        />
+
+        {/* <Menu
           className="burger-menu"
           isOpen={isOpen}
           selectedKey={"entry"}
@@ -46,10 +52,11 @@ const Navbar = () => {
             <Item
               itemKey={dropdownItem.text}
               text={dropdownItem.text}
-              onClick={() => navigate(dropdownItem.href)}
+              onClick={(e) => console.log(e)}
+              key={dropdownItem.text}
             ></Item>
           ))}
-        </Menu>
+        </Menu> */}
       </div>
     </nav>
   );

@@ -64,6 +64,8 @@
 @media (max-width: 600px) {
   .recommended-videos__body {
     flex-direction: column;
+    gap: 25px;
+    text-align: center;
   }
   .recommended-videos__body .recommended-videos__body--item {
     width: 100%;

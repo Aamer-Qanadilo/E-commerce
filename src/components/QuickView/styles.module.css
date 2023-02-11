@@ -55,6 +55,7 @@
   height: 68px;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   cursor: pointer;
 }
 
@@ -89,26 +90,26 @@
   margin: 12px 0 0;
 }
 
-.quickViewContentHeader > div {
+.quickViewContentSecondaryHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #ff6008;
 }
 
-.quickViewContentHeader > div > p {
+.quickViewContentSecondaryHeader > p {
   font-size: 24px;
   font-weight: 300;
   line-height: 30px;
 }
 
-.quickViewContentHeader > div > ul {
+.quickViewContentSecondaryHeader > ul {
   display: flex;
   list-style-type: none;
   gap: 5px;
 }
 
-.quickViewContentHeader > div > ul li:last-child {
+.quickViewContentSecondaryHeader > ul li:last-child {
   margin-left: 5px;
 }
 
@@ -281,6 +282,23 @@
   font-weight: 700;
 }
 
+
+/* Single Product Styles */
+.quickViewProductContainer {
+  height: auto;
+  min-height: 100vh;
+}
+
+.quickViewNavSingleProduct > * {
+  width: 80%;
+  margin: 0 auto !important;
+}
+
+.quickViewProductBody {
+  width: 80%;
+  margin: 0 auto;
+}
+
 @media (max-width: 1100px) {
   .quickViewContainer {
     box-sizing: border-box;
@@ -298,18 +316,81 @@
   }
 }
 
-/* Single Product Styles */
-.quickViewProductContainer {
-  height: auto;
-  min-height: 100vh;
+
+@media (max-width: 700px) {
+  /* .quickViewNav > i {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+  } */
+  
+  .quickViewNav > h3  {
+    font-size: 16px;
+    width: 85%;
+  }
+
+  .quickViewContentHeader > h3 {
+    font-size: 18px;
+  }
+
+  .quickViewNav > i {
+    font-size: 24px;
+  }
+  
+  .quickViewImagesContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .quickViewImagesChooser {
+    width: 100%;
+    order: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  
+  .quickViewImagesOption {
+    width: 60px;
+    height: 60px;
+  }
 }
 
-.quickViewNavSingleProduct > * {
-  width: 80%;
-  margin: 0 auto !important;
+@media (max-width: 525px) {
+  .quickViewItemButton {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-.quickViewProductBody {
-  width: 80%;
-  margin: 0 auto;
+@media (max-width: 465px) {
+
+  .quickViewContentSecondaryHeader > p {
+    font-size: 20px;
+  }
+  
+  .quickViewContentSecondaryHeader > ul {
+    font-size: 15px;
+  }
+
+  .quickViewProductBody {
+    width: 95%;
+  }
+
 }
+
+
+@media (max-width: 350px) {
+
+  .quickViewContentSecondaryHeader > p {
+    font-size: 16px;
+  }
+  
+  .quickViewContentSecondaryHeader > ul {
+    font-size: 12px;
+  }
+
+}
+

@@ -13,7 +13,11 @@
 }
 
 @media (max-width: 1050px) {
+  .asSeenOnInstagramContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .instagramCard {
-    width: 49%;
+    width: 40%;
   }
 }

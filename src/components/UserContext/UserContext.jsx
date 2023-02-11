@@ -48,6 +48,7 @@ export const UserProvider = ({ children }) => {
       title: "Are you sure?",
       text: "Are you sure that you want to delete this file?",
       icon: "warning",
+      buttons: true,
       dangerMode: true,
     });
 
@@ -55,7 +56,10 @@ export const UserProvider = ({ children }) => {
       const tempCart = [...cart];
       tempCart.splice(index, 1);
       setCart(tempCart);
-      swal("Deleted!", "Your imaginary file has been deleted!", "success");
+      swal("Deleted!", "Your imaginary file has been deleted!", "success", {
+        timer: 1000,
+        buttons: false,
+      });
     }
   };
 

@@ -84,3 +84,10 @@
     grid-row: 3/4;
   }
 }
+
+@media (max-width: 400px) {
+  .exploreSectionBody {
+    display: flex;
+    flex-direction: column;
+  }
+}

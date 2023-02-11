@@ -125,6 +125,10 @@
   text-transform: capitalize;
 }
 
+.activeFilter * {
+  color: #ff6008;
+}
+
 @media (max-width: 1000px) {
   .productListNav > div > ul > li:first-child {
     font-size: 16px;

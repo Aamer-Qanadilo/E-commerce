@@ -31,4 +31,8 @@
   .RegisterForm {
     width: 65%;
   }
+  
+  .RegisterForm > p {
+    font-size: 12px;
+  }
 }

@@ -31,4 +31,7 @@
   .LoginForm {
     width: 65%;
   }
+  .LoginForm > p {
+    font-size: 12px;
+  }
 }

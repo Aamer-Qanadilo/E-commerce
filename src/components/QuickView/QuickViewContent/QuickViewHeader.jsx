@@ -6,7 +6,7 @@ const QuickViewHeader = ({ item }) => {
   return (
     <div className={styles.quickViewContentHeader}>
       <h3>{item.title}</h3>
-      <div>
+      <div className={styles.quickViewContentSecondaryHeader}>
         <p>USD {item.price}</p>
         <ul>
           {functions.FindStars(item.rating?.rate)}

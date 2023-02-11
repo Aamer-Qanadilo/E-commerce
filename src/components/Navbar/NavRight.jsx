@@ -1,17 +1,30 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { stack as Menu } from "react-burger-menu";
 import { UserContext } from "../UserContext/UserContext";
 import "./styles.css";
+import CustomToggle from "./CustomToggle";
 
-const NavRight = ({ setIsOpen, isOpen }) => {
+const NavRight = ({ navDropDownList }) => {
   const { cart, user } = useContext(UserContext);
   const navigate = useNavigate();
 
   return (
     <div className="nav-right">
-      <div onClick={() => setIsOpen(!isOpen)} className="navButton">
+      {/* <div onClick={() => setIsOpen(!isOpen)} className="navButton">
         <i className="fa-solid fa-bars"></i>
-      </div>
+      </div> */}
+      <Menu right pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
+        {navDropDownList.map((dropdownItem, index) => (
+          <Link
+            to={dropdownItem.href}
+            key={dropdownItem.text}
+            className="menu-item"
+          >
+            {dropdownItem.text}
+          </Link>
+        ))}
+      </Menu>
       {!user ? (
         <>
           <Link to="/login">Login</Link>

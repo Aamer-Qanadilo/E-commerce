@@ -30,7 +30,11 @@ const ProductListPageFilters = ({ filter, setFilter, setFilterLoading }) => {
       </p>
       <ul>
         {categories.map((category, index) => (
-          <li key={index} onClick={() => filterProducts(category)}>
+          <li
+            key={index}
+            onClick={() => filterProducts(category)}
+            className={filter === category ? styles.activeFilter : ""}
+          >
             <span>{category}</span>
             {filter === category ? (
               <i class="fa fa-angle-up" aria-hidden="true"></i>
