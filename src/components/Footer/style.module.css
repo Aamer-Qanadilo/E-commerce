@@ -4,6 +4,11 @@
   background-color: #33333a;
 }
 
+.footerWrapper * {
+  border-color: white !important;
+  color: white !important;
+}
+
 .FooterContainer {
   display: flex;
 }
@@ -37,7 +42,7 @@
 }
 
 .FooterContainer .FooterSection li {
-  color: rgb(222, 222, 222);
+  color: rgb(222, 222, 222) !important;
   font-size: 14px;
 }
 
