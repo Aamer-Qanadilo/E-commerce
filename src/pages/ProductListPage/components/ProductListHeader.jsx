@@ -6,7 +6,7 @@ const ProductListHeader = ({ filter }) => {
   return (
     <Header
       headerClass={styles.headerClass}
-      headerBackground={"/assets/images/productListHeader.png"}
+      headerBackground={"/E-commerce/assets/images/productListHeader.png"}
     >
       <h2 className={styles.productListHeader}>
         {filter.length ? filter : "Product List"}

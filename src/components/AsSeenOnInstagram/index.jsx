@@ -6,16 +6,16 @@ import styles from "./styles.module.css";
 
 const instagramCards = [
   {
-    image: "/assets/images/productPage-Instagram-1.png",
+    image: "/E-commerce/assets/images/productPage-Instagram-1.png",
   },
   {
-    image: "/assets/images/productPage-Instagram-2.png",
+    image: "/E-commerce/assets/images/productPage-Instagram-2.png",
   },
   {
-    image: "/assets/images/productPage-Instagram-3.png",
+    image: "/E-commerce/assets/images/productPage-Instagram-3.png",
   },
   {
-    image: "/assets/images/productPage-Instagram-4.png",
+    image: "/E-commerce/assets/images/productPage-Instagram-4.png",
   },
 ];
 

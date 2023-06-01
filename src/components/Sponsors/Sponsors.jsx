@@ -7,7 +7,7 @@ const Sponsors = () => {
     <section className={styles.asSeenOn}>
       <div className="container-wrapper">
         <SectionTitle sectionHeader="As Seen On" />
-        <img src="/assets/images/AsSeenOn.png" alt="" />
+        <img src="/E-commerce/assets/images/AsSeenOn.png" alt="" />
       </div>
     </section>
   );

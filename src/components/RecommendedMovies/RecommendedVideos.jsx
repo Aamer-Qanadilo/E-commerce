@@ -7,15 +7,15 @@ const RecommendedVideos = () => {
   const videos = [
     {
       title: "Jamdani",
-      imageUrl: "/assets/images/recommended1.png",
+      imageUrl: "/E-commerce/assets/images/recommended1.png",
     },
     {
       title: "Lorem ipsum dolor sit amet",
-      imageUrl: "/assets/images/recommended2.png",
+      imageUrl: "/E-commerce/assets/images/recommended2.png",
     },
     {
       title: "Lorem ipsum dolor sit amet",
-      imageUrl: "/assets/images/recommended3.png",
+      imageUrl: "/E-commerce/assets/images/recommended3.png",
     },
   ];
 

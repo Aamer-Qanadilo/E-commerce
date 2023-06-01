@@ -49,8 +49,8 @@ const Footer = () => {
               </Button>
             </div>
             <div className={styles.FooterIcons}>
-              <img src="/assets/icons/Facebook Icon.svg" alt="" />
-              <img src="/assets/icons/Twitter Icon.svg" alt="" />
+              <img src="/E-commerce/assets/icons/Facebook Icon.svg" alt="" />
+              <img src="/E-commerce/assets/icons/Twitter Icon.svg" alt="" />
             </div>
           </div>
         </div>

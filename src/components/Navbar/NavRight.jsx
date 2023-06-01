@@ -34,10 +34,10 @@ const NavRight = ({ navDropDownList }) => {
         <></>
       )}
       {/* <button>
-        <img src="/assets/icons/search.svg" alt="" />
+        <img src="/E-commerce/assets/icons/search.svg" alt="" />
       </button>
       <button>
-        <img src="/assets/icons/heart.svg" alt="" />
+        <img src="/E-commerce/assets/icons/heart.svg" alt="" />
       </button> */}
       <button
         className="cartButton"
@@ -46,7 +46,7 @@ const NavRight = ({ navDropDownList }) => {
           navigate({ pathname: "/cart" });
         }}
       >
-        <img src="/assets/icons/Shape.svg" alt="" />
+        <img src="/E-commerce/assets/icons/Shape.svg" alt="" />
         <span>{cart.length}</span>
       </button>
     </div>

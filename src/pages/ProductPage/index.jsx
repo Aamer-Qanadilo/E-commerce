@@ -20,7 +20,7 @@ const ProductPage = () => {
     <div className={styles.ProductPageContainer}>
       {product && <QuickView popupItem={product}></QuickView>}
       <Header
-        headerBackground={"/assets/images/productPageHeader.png"}
+        headerBackground={"/E-commerce/assets/images/productPageHeader.png"}
         headerClass={styles.productPageHeader}
       ></Header>
       <Container50>

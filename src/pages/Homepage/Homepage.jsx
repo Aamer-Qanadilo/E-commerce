@@ -21,8 +21,8 @@ const Sponsors = lazy(() => import("../../components/Sponsors/Sponsors"));
 const Homepage = ({ featuredItems }) => {
   const { getFeaturedItems } = useContext(FeaturedContext);
   const headerBackgrounds = [
-    "/assets/images/header.png",
-    "/assets/images/header2.png",
+    "/E-commerce/assets/images/header.png",
+    "/E-commerce/assets/images/header2.png",
   ];
 
   // useEffect(() => {

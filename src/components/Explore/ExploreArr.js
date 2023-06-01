@@ -3,12 +3,12 @@ const exploreContent = [
     date: "FIELDTESTED- JANUARY 19, 2017",
     title: "Connected Clothing: Raye Padit",
     description: `As a voice for conscious fashion, Raye Padit is motivated by the belief that one person’s actions, no matter how small, holds great impact. This core ideal has driven him to start his three passion projects: Connected Threads Asia, PeyaR, and Swagalls.`,
-    imageUrl: "/assets/images/explore1.png",
+    imageUrl: "/E-commerce/assets/images/explore1.png",
   },
   {
     date: "FIELDTESTED- JANUARY 19, 2017",
     title: "Kérastase: A Collaboration",
-    imageUrl: "/assets/images/explore2.png",
+    imageUrl: "/E-commerce/assets/images/explore2.png",
   },
   {
     date: "FIELDTESTED- JANUARY 19, 2017",
@@ -23,7 +23,7 @@ const exploreContent = [
   {
     date: "FIELDTESTED- JANUARY 19, 2017",
     title: "How To Wear The Lounge Lunghi",
-    imageUrl: "/assets/images/explore3.png",
+    imageUrl: "/E-commerce/assets/images/explore3.png",
   },
 ];
 

@@ -19,15 +19,18 @@ const PageRouter = () => {
         <Route element={<Layout />}>
           {!user ? (
             <>
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
+              <Route path="/E-commerce/login" element={<Login />} />
+              <Route path="/E-commerce/register" element={<Register />} />
             </>
           ) : null}
           <Route index element={<Homepage />} />
-          <Route path="/product-list" element={<ProductListPage />} />
-          <Route path="/product/:id" element={<ProductPage />} />
+          <Route
+            path="/E-commerce/product-list"
+            element={<ProductListPage />}
+          />
+          <Route path="/E-commerce/product/:id" element={<ProductPage />} />
 
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/E-commerce/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

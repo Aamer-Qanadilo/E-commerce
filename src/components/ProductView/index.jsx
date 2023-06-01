@@ -5,15 +5,15 @@ import styles from "./styles.module.css";
 
 const productViewCards = [
   {
-    image: "/assets/images/productPage-1.png",
+    image: "/E-commerce/assets/images/productPage-1.png",
     text: "Lorem ipsum dolor sit amet",
   },
   {
-    image: "/assets/images/productPage-2.png",
+    image: "/E-commerce/assets/images/productPage-2.png",
     text: "Lorem ipsum dolor sit amet",
   },
   {
-    image: "/assets/images/productPage-3.png",
+    image: "/E-commerce/assets/images/productPage-3.png",
     text: "Lorem ipsum dolor sit amet",
   },
 ];
