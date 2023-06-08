@@ -1,0 +1,233 @@
+nav {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+nav > div {
+  background-color: #fbfbfd;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+nav .nav-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+}
+
+nav .nav-left a {
+  width: 18%;
+  cursor: pointer;
+}
+
+nav .nav-left a img {
+  width: 100%;
+}
+
+nav .nav-left .nav-left-menu {
+  display: flex;
+  gap: 20%;
+  margin-left: 20px;
+}
+
+nav .nav-left .nav-left-menu .nav-dropdown-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Navbar Right */
+
+.nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+}
+
+.nav-right button {
+  background-color: transparent;
+  border: 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.nav-right a {
+  color: #373a47;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.cartButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cartButton span {
+  position: absolute;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  right: -2px;
+  bottom: -10px;
+  background-color: red;
+}
+
+/* Sidebar */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: relative;
+  width: 20px;
+  height: 17px;
+  display: none;
+  /* left: 36px;
+  top: 36px; */
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  font-size: 16px !important;
+  color: #d1d1d1 !important;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  nav .nav-left a {
+    width: 50%;
+  }
+  .bm-burger-button {
+    display: block;
+  }
+  .nav-left-menu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-right button {
+    font-size: 11px;
+  }
+
+  .nav-right a {
+    font-size: 11px;
+  }
+  .bm-burger-button {
+    width: 15px;
+    height: 12px;
+  }
+}
+
+/* @media (max-width: 1050px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 99;
+    background-color: white;
+    top: 0;
+    padding: 25px 0;
+  }
+
+  nav * {
+    font-size: 18px;
+  }
+
+  nav .nav-left a {
+    width: 50%;
+  }
+
+  nav .nav-left,
+  nav > div,
+  .nav-left .nav-left-menu,
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  nav > div {
+    width: 100%;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  nav a:hover *,
+  nav a:hover,
+  nav a:hover,
+  nav button:hover {
+    color: #ff6008;
+  }
+} */

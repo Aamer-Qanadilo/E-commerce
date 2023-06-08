@@ -1,0 +1,23 @@
+.asSeenOnInstagramContainer {
+  display: flex;
+  width: 100%;
+  gap: 25px;
+}
+
+.instagramCard {
+  width: 24%;
+}
+
+.instagramCard img {
+  width: 100%;
+}
+
+@media (max-width: 1050px) {
+  .asSeenOnInstagramContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .instagramCard {
+    width: 40%;
+  }
+}

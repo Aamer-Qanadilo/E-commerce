@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@300&display=swap");
+
+@import url("https://fonts.cdnfonts.com/css/vl-newparis-headline");
+
+body {
+  background-color: #fcfcfc;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "VL NewParis Headline", sans-serif;
+  font-weight: 400;
+}
+
+button {
+  letter-spacing: 2px;
+  border: 0;
+  background-color: #33333a;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}

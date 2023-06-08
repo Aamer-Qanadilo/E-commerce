@@ -1,0 +1,38 @@
+.RegisterContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/public/assets/images/header2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.RegisterForm {
+  background-color: white;
+  box-sizing: unset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+  width: 30%;
+  padding: 0px 40px 50px;
+  border: 1px solid black;
+}
+
+@media (max-width: 1000px) {
+  .RegisterForm {
+    width: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  .RegisterForm {
+    width: 65%;
+  }
+  
+  .RegisterForm > p {
+    font-size: 12px;
+  }
+}

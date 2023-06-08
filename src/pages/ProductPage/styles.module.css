@@ -1,0 +1,42 @@
+.ProductPageContainer {
+  /* width: 80%; */
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.productPageHeader {
+  min-height: 70vh;
+  background-size: cover;
+  width: 100vw;
+  background-position-y: center;
+}
+
+.secondaryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 17.5px;
+}
+
+.mainTextHeader {
+  color: rgb(102, 102, 102);
+  line-height: 25px;
+}
+
+.mainTextSecondary {
+  color: rgb(51, 51, 58);
+  line-height: 25px;
+  margin-bottom: 60px;
+}
+
+.middleText {
+  margin: 120px 0;
+  color: rgb(51, 51, 58);
+  font-size: 17.5px;
+}
+
+@media (max-width: 850px) {
+  .productPageHeader {
+    min-height: 60vh;
+  }
+}

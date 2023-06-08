@@ -1,0 +1,106 @@
+.footerWrapper {
+  min-height: 35vh;
+  padding: 30px 10px;
+  background-color: #33333a;
+}
+
+.footerWrapper * {
+  border-color: white !important;
+  color: white !important;
+}
+
+.FooterContainer {
+  display: flex;
+}
+
+.FooterContainer .FooterSection {
+  width: 20%;
+}
+
+.FooterContainer .FooterSection:last-child {
+  width: 40%;
+}
+
+.FooterContainer .FooterSection > * {
+  width: fit-content;
+}
+
+.FooterContainer .FooterSection h4 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 50px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.FooterContainer .FooterSection ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.FooterContainer .FooterSection li {
+  color: rgb(222, 222, 222) !important;
+  font-size: 14px;
+}
+
+.FooterContainer .FooterSection li:hover {
+  color: #ff6008;
+}
+
+.FooterSectionInput {
+  display: flex;
+  width: 100% !important;
+  gap: 5%;
+  justify-content: space-between;
+}
+
+.FooterTextField {
+  width: 75% !important;
+}
+
+.FooterTextField * {
+  border-color: rgba(222, 222, 222, 0.5);
+  color: rgba(222, 222, 222, 0.5);
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.FooterTextButton {
+  background: rgb(222, 222, 222);
+  color: #33333a;
+  font-size: 12px;
+  font-weight: 550;
+  padding: 0 40px;
+}
+
+.FooterIcons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.FooterCopyright {
+  text-align: center;
+  font-size: 14px;
+  padding: 60px 0 10px;
+  color: rgb(222, 222, 222);
+}
+
+@media (max-width: 1100px) {
+  .FooterContainer {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .FooterContainer > * {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

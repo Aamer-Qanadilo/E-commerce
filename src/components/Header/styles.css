@@ -1,0 +1,77 @@
+header {
+  /* background */
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+header h1 {
+  position: absolute;
+  left: 70%;
+  top: 27%;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 60px;
+  /* max-width: 12ch; */
+  line-height: 80px;
+  font-weight: 400;
+}
+
+header button {
+  position: absolute;
+  left: 70%;
+  top: 58%;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0 0 20px;
+  border: 0;
+  border-bottom: 1px solid white;
+  letter-spacing: 2;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 1750px) {
+  header button,
+  header h1 {
+    left: 60%;
+  }
+}
+
+@media (max-width: 1300px) {
+  header button,
+  header h1 {
+    left: 50%;
+  }
+}
+
+@media (max-width: 1100px) {
+  header button,
+  header h1 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 700px) {
+  header button {
+    font-size: 10px;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 350px) {
+  header button {
+    font-size: 10px;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+}

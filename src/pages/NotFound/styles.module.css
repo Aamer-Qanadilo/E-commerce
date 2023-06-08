@@ -1,0 +1,17 @@
+.notFound {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notFound * {
+  /* color: white; */
+  color: #33333a;
+}
+
+.notFound img {
+  width: 50%;
+}
